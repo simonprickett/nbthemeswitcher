@@ -26,15 +26,15 @@ function nbthemeswitcher($theme) {
 	   strpos($_SERVER['HTTP_X_PROXY_HOST'], 'm.mydomain.com') !== false) {
 	   	/* 
 	   	This request came from Netbiscuits, does the device need a Tactile theme? 
-	   	Note, this needs Netbiscuits support to enable HTTP_X_DEVICEPARAM_TACTILE_CANTACTILE
+	   	Note, this needs Netbiscuits support to enable HTTP_X_DEVICEPARAM_TACTILECANTACTILE
 	   	for your custom application.
 	   	*/
-	   	if (strpos($_SERVER['HTTP_X_DEVICEPARAM_TACTILE_CANTACTILE'], 'true') !== false) {
+	   	if (strpos($_SERVER['HTTP_X_DEVICEPARAM_TACTILECANTACTILE'], 'true') !== false) {
 	   		/* This device can use a Tactile theme. */
 	   		$theme = 'twentyten';
 	   	} else {
 	   		/* This device needs a Classic BiscuitML theme. */
-			$theme = 'twentyeleven';
+			$theme = 'christmas-is-near';
 		}
 	}
 	return $theme;
